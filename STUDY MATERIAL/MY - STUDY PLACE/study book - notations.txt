@@ -1,0 +1,22 @@
+use console in the browser to do simple code in Js 
+
+to explicit that some value with name is a variable is used the LET
+    let variable = 'something'
+
+definition of javascript
+    high level
+        managing the program memory isn't a worry
+    object oriented
+        based on objects for storing most kinds of data
+    multi-paradigm
+        instruct computer to DO THINGS
+        works on imperative and instructive code
+    
+the role of Js in web dev
+    in the browser create front-end web app
+    add dynamic and interactive effects
+    build applications
+    WITH NODE
+        CAN CREATE WEB APPLICATIONS ON WEB SERVERS
+        BEACK-END APPLICATIONS
+
