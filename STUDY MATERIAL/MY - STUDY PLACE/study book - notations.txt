@@ -1,22 +1,68 @@
-use console in the browser to do simple code in Js 
+day 1 16/06/2025
+    use console in the browser to do simple code in Js 
 
-to explicit that some value with name is a variable is used the LET
-    let variable = 'something'
+    to explicit that some value with name is a variable is used the LET
+        let variable = 'something'
 
-definition of javascript
-    high level
-        managing the program memory isn't a worry
-    object oriented
-        based on objects for storing most kinds of data
-    multi-paradigm
-        instruct computer to DO THINGS
-        works on imperative and instructive code
+    definition of javascript
+        high level
+            managing the program memory isn't a worry
+        object oriented
+            based on objects for storing most kinds of data
+        multi-paradigm
+            instruct computer to DO THINGS
+            works on imperative and instructive code
+        
+    the role of Js in web dev
+        in the browser create front-end web app
+        add dynamic and interactive effects
+        build applications
+        WITH NODE
+            CAN CREATE WEB APPLICATIONS ON WEB SERVERS
+            BEACK-END APPLICATIONS
+
+    we can have in line scripts, but the only advantage are that it dosen't requires a propper Js file to store it
+        but its bad for separe content - hmtl/css
+        from logic - Js
+
+    PUT THE SCR = 'SCRIPT.JS' IN THE BELOW PART OF THE BODY
+
+    value = piece of data
+        it needs to be stored in somewhere
+        can be
+            constants = const 
+            variables = let
+
+day2 17062025
+    convention and rules to name variables  
+        camelCase
+        cant put number first on a variable
+            1thisIsNotAVariable
+                thisIs
+        avoid reserved key words
+        make variables name descriptive 
+        variable = box that can sotre a value
     
-the role of Js in web dev
-    in the browser create front-end web app
-    add dynamic and interactive effects
-    build applications
-    WITH NODE
-        CAN CREATE WEB APPLICATIONS ON WEB SERVERS
-        BEACK-END APPLICATIONS
+    data types
+        every value in Js is 
+        object
+        primitive
+            number
+            boolean
+            string 
+            Null
+            Undefined
+            Symbol 
+            bigint 
+        Js is dynamic typed, it dosent need to say what type is the data used on the code
+        typeof(data) 
+            return the data type
 
+    code comenting
+        // coment code after the double slash
+        /* to create
+            multi line of comented code */
+    OBS:
+    when declaring variabel it need to use the let/const
+        after, if reasign value it dosent need the let keyword
+    
