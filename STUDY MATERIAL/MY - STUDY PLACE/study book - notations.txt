@@ -108,4 +108,14 @@ day3 18062025
         usually all the math operators are triggered before the logical/boolean/assignment operators
         assignment is done right to left allways
         grouping has high precedence
+    
+    strings and template literals
+        insert the variable inside the string 
+        ` use back ticks and write the string, and use para adicionar a ${variavel}`
+            inside the curly braces can be put a calculation 
+            can be used all time as traditional indicator of a string, instead of the '' or ""
+        \n\ represents there's a new line betwen the content 
+            for template literals can just use a enter betwen the content
+    
+    conditional *if/else statements*
         
