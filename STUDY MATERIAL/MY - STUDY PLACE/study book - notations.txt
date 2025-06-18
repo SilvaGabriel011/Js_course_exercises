@@ -62,7 +62,50 @@ day2 17062025
         // coment code after the double slash
         /* to create
             multi line of comented code */
-    OBS:
-    when declaring variabel it need to use the let/const
-        after, if reasign value it dosent need the let keyword
+
+
+day3 18062025
+
+    declaring variables
+        let
+            variables that can have the value changed 
+            reassing/mutate value for the value
+            *BLOCK SCOPE*
+        var
+            SHOULD BE COMPLETELY AVOIDED
+            USED IN LEGACY CODE
+            *FUNCTION SCOPE*
+        const
+            creates a variable that its imutable/cannot be reassing 
+            cannot creat empty const variables 
+            it needs initial variables 
+        use const by default but if the variable is getting change somewhere in the code, use let 
+        OBS:
+        when declaring variabel it need to use the let/const
+            after, if reasign value it dosent need the let keyword
+            but always declare a variable at first 
+
+    operators
+        all *mathematical operations* can be used in Js 
+            + add (can be use to concatonate stings aswell)
+            - subtract
+            * multiply
+            / divide
+            %% (module, that is the rest of the division)
+            ** (to the power)
+            += (a = a + some value, so if += 1 then, a = a + 1)
+            *= (a = a * some value, so if *= 1 then, a = a * 1)
+            ++ (a = a + 1, add one value to the variable or anything like that...)
+            -- (a = a - 1, subtract one value to the variable or anything like that....)
+        comparison operators, all of them return a boolean value
+            > (graterthan)
+            < (less than)
+            >= (grater or equal)
+            <= (less or equal)
     
+    operators precedence
+        available at mdn mozilla precedence operators
+        usually all the math operators are triggered before the logical/boolean/assignment operators
+        assignment is done right to left allways
+        grouping has high precedence
+        
