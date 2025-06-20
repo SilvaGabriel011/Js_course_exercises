@@ -117,5 +117,64 @@ day3 18062025
         \n\ represents there's a new line betwen the content 
             for template literals can just use a enter betwen the content
     
-    conditional *if/else statements*
-        
+day4 19062025
+    control strcuture:
+        conditional *if/else statements*
+            condition a is true?
+            
+                if yes, execute this block of code
+                    block of condition === true
+                if no
+                    block of condition === false
+
+                ****inside the paranthesis will be a code that returns a boolean value****
+                
+            if (value is true?){
+                execute this block of code
+            }    
+            else if (value true instead){
+                execute this other block of code
+            }
+            else *execluding all of values,doesen't need a boolean value here* {
+                execute this block of code
+            }
+
+            EX.: FOR NOTATIONS....
+                if (!isMarkHigherBmi) {
+                    console.log(`johns's BMI ${bmiJohn} is higher than mark's ${bmiMark}!`);
+                }
+                else {
+                    console.log(`Mark's BMI ${bmiMark} is higher than John's ${bmiJohn}!`);
+                };
+
+    type conversion/coercion
+        javascript have both 
+            coercion = automatically converts the type of the data
+            number(value) = forces the string to be a number    
+                built in function 
+                works only if the value is a string of numbers
+                    if used in characters will return NaN
+            string(value) = forces the number to be a string
+                built in function 
+                work only if the value is a number
+            can only convert
+                to a number
+                to a string
+                to a boolean
+        in many situations js just coert the data to what it jugdes its best 
+        minus/multiplier/dividing operators makees strings become numbers
+        add operator make number become string 
+
+    truthy and falsie values
+        falsy values
+            0
+            empty string
+            Undefined
+            Null
+            NaN
+        boolean(value)
+            built in function that's return's true/false
+            based on falsy/truthy values 
+        in logical context evaluation Js will search for the truthy/falsy values
+        if (truthy/!falsy){do this....;}
+            the parenthesis is a logical enviroment 
