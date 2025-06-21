@@ -178,3 +178,46 @@ day4 19062025
         in logical context evaluation Js will search for the truthy/falsy values
         if (truthy/!falsy){do this....;}
             the parenthesis is a logical enviroment 
+
+day5 20062025
+    equality operators == x ===
+        '18' == 18 returns true
+            but '18' === 18 returns false 
+        it needs to have both value and type of data to be triple equal 
+        strict equality comparison (===)
+            it only returns true if both of values has equal, DOES NOT PERFORMS TYPE COERCION
+                type
+                data
+            BETTER FOR CLEAN CODE 
+        loose equality (==)
+            does type coercion, so
+                18 == '18' returns true 
+            Can cause hard to find bugs 
+
+    user input === **const storeString = prompt("store some data")**
+        it will be stored as string
+        **const sotreNumber(prompt("store a value that will be stored as number))**
+    !== state diference between datas
+        !true returns false
+    
+
+    boolean logic --- and, or, not
+    
+        *AND* TRUTH TABLE
+        it needs both values to be true, to return true
+        true a AND true b === true
+        false a AND true b === false
+        true a AND false b === false
+        false a AND false b === false
+
+        *OR* TRURH TABLE
+        it only needs one variable to be true to return true
+        true a OR true b === true
+        false a OR True b === true
+        true a OR false b === true
+        false a OR false b === false 
+        
+        NOT === inverts the boolean value
+        ****HAS MORE PRECEDENCE, SO VALUES ARE INVERTED BEFORE COMPARING FOR LOGICAL OPERATIONS****
+        !true == return false
+        !false = return true   
