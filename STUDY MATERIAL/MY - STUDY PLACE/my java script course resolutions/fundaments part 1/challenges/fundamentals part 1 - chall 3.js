@@ -30,4 +30,4 @@ if (isKoalaHigher) {
 }
 
 // good solutions
-//good praticing on abstracions levels
+// good praticing on abstracions levels

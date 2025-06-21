@@ -242,6 +242,62 @@ day6 21062025
                 returns false
                 !false
                     returns true
+    
+    switch statement
+        switch (variable) {
+            case 'value':
+                block of action
+                break
+            case 'value2':
+                block of action 2 
+                break
+            case 'value3':
+                block of action 3
+                break
+            default:
+                'not a valid entry'
+        }
+        without the break, it will try to run the after option, instead of exiting the switch case
+        if all cases fail 
+            default:
+                block of code 
+    
+    statements and expressions
+        high level overview
+        expression === pice of code that produces a value
+            3+4
+            1999
+            true
+            false || !true
+            An expression is any valid unit of code that resolves to a value. 
+                Expressions are used to perform computations or evaluations. 
+                    They always return a value, which could be a number, string, object, or any other type.
+
+        statements/declaration === full sentences that can be translated as actions 
+            bigger piece of code that it's executed and not produces a value on itself
+            A statement is a piece of code that performs an action but doesn't return a value directly.
+                Statements define the structure of your program and control its flow.
+            if (23>1) {
+                block of action
+            }
+            dosen't necessarily produces a value
+
+        You can think of expressions as parts of code that evaluate to produce results, and statements as chunks of code that execute a task or control the flow of the program.
+
+    the conditional - ternary - operator 
+        allow to write something similar to if else, but in one line
+        value >= value2 ? execute this : second option (if boolean option is false, it triggers the second option)
+            return a boolean (true or false)
+        allways produces a value
+            is a expression 
+        can be used inside template literals 
+            `${value1 > value2 ? 'value a' : 'value b'}`
+    
+    js releases     
+        ES5 - ES6(ES20215)
+        ESNEXT
+        backwards compatibility
+            legacy.
+        transpile
+            BABEL
         
-        
-            
