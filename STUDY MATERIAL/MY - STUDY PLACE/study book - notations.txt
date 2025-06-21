@@ -221,3 +221,27 @@ day5 20062025
         ****HAS MORE PRECEDENCE, SO VALUES ARE INVERTED BEFORE COMPARING FOR LOGICAL OPERATIONS****
         !true == return false
         !false = return true   
+
+
+day6 21062025
+
+    logical operators
+        and operator === &&
+        or operator === || 
+
+        so
+            true && true === True
+            false && true === false
+            false && false === false
+
+            true || true === True
+            true || false === true
+            false || false === false
+
+            !true === inverters the boolean value 
+                returns false
+                !false
+                    returns true
+        
+        
+            
