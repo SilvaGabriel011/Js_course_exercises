@@ -150,11 +150,11 @@ day4 19062025
     type conversion/coercion
         javascript have both 
             coercion = automatically converts the type of the data
-            number(value) = forces the string to be a number    
+            Number(value) = forces the string to be a number    
                 built in function 
                 works only if the value is a string of numbers
                     if used in characters will return NaN
-            string(value) = forces the number to be a string
+            String(value) = forces the number to be a string
                 built in function 
                 work only if the value is a number
             can only convert

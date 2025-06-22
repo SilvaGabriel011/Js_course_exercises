@@ -1,0 +1,117 @@
+day7 22062025
+    strict mode 
+        activate to write secure code
+        'use strict'
+        avoids accidental errors
+        create visable errors 
+        alarms about reserved words in language 
+        explicitate the error 
+            makes the bug findable 
+    
+    **********FUNCTIONS!!!!!!!**********
+        is a piece of code that can be reused
+            function nameOfFunciton(parameter){
+                function body (block of code wich will be executed)
+            }
+        
+            function logger(){
+                console.log("hi")
+            }
+            call the function, to get the block of code executed
+                logger()
+        can receive data and return data 
+        when the parameters has actual values, they become arguments
+            the generic value to determine that something will be used is called parameter
+            but the real value is called argument
+            SO THE PARAMETER IS JUST CONSIDERED AS PLACEHOLDER
+        allow us to write more maintainable code 
+            modularization
+            good principle in clean code
+                DRY
+    
+    function declarations vs expressions 
+        parameter is a local variable that is available inside the function
+            escope.
+        store a function inside a variabel get its to an expression
+        example
+
+            const calcAge2 = function (birthYear) {
+                return 2025 - birthYear
+            }
+            const age2 = calcAge2(1999)
+
+        a function without a name is called anonymous function 
+        this is an expression, so returns value    
+            const calcAge2 = function (birthYear)
+            {
+            return 2025 - birthYear
+            }
+
+        functions are seen as just values in JS 
+        functions declarations
+            we can call functions declarations before they are defined in the code
+
+
+        STUDY CASES::::
+        1.
+            const saulutation = function(String(name)){
+                console.log(`hi ${name}`)
+            }
+            salutation(gabriel) /// returns hi gabriel 
+
+        2. callback
+            function execute(function){
+                console.log(`result: `, function(5))
+            }
+            const double = function(n){
+                return n * 2
+            }
+            execute(double) //// returns result: 10
+
+        3. closure
+            function multiplier(factor){
+                return function(n){
+                    return n * factor
+                }
+            }
+            const triple = multiplier(3)
+            console.log(triple(10)) /// return 30 
+        
+        4.
+            function double = function(x){
+                return x * 2
+            };
+            function printResult(function,value){
+                console.loG(function(value))
+            }
+            printResult(double,8) /// 16
+        
+        5. 
+            function count1(){
+                let count = 0;
+                return function(){
+                    count++
+                    return count;
+                }
+            }
+            const count2 = count1()
+            console.log(count2()) /// 1
+            console.log(count2()) /// 2
+            console.log(count2()) /// 3
+        
+    arrow functions 
+        const variable = parameter => return value
+    
+    functions calling other functions 
+        allows usability and modularization
+    
+
+    reviewing functions 
+        function declarations 
+            function that can be used before its declared
+            function calcAge(irthYear){block of code}
+        functions expressions
+            essentially a function value stored in a variable
+            const calcAge = function(birthYear){block of code}
+    
+    
