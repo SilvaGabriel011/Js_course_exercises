@@ -114,4 +114,120 @@ day7 22062025
             essentially a function value stored in a variable
             const calcAge = function(birthYear){block of code}
     
+    introduction to arrays
+        better with ordered data
+        array = [value1, 'value2', value3]
+        new array = (value1, value2, 'value3')
+        array[0] = value1
+            array[1] = value2
+            array[2] = value3
+        array.length
+            returns the amount of elements (isn't zero based, gives it the precise number)
+        can change one of the values inside an array 
+            but it cant change all of the array
+        can put an array inside of an array 
     
+    basic arrays operations -- METHODS
+        array.push(element)
+            add an element to the end of array
+            becomes array[array.length-1]
+        array.unshift(element)
+            add an element to the begining of the array
+            becomes array[0]
+        array.pop
+            remove the last element of the array 
+        array.shift
+            remove the first element of the array
+        array.indexOff(element)
+            return the addres of the element inside the array 
+            0 based
+            if the element isn't in the array will return -1 
+        array.includes(element)
+            return true if the element is in the array
+                return false if the element isn't in the array 
+            uses strict equality to check (===)
+            can be used to write conditionals
+    
+    introdution to objects 
+        key value pairs
+        const objectCreation = {
+            'key' : value1,
+            'key2' value2,
+            ...
+        }
+            the value can be an expression (so, it will return a value)
+            the keys are also called properties
+        group together diferent variables that belong together
+        better for unstructured data
+    
+    how to retrive data from objects/how to change data in objects
+        we retrive the propertie from the object using the name of the propertie itself
+        object.propertie
+            return the value associated to the key
+            can be used as object['value']
+                in wich value is an expression (returns value)
+        object.newPropertie = valueX
+            adds to the final of the object a new pair of key : value ('newPropertie':valueX)
+    
+    object METHODS
+        if a function is just a value, we can create a key value pair in wich the function replaces the value part
+        a function that is attached to an object is called METHODS
+        object = {
+            propertie : function(parameter) {
+                block of code
+            }
+        }
+        object.propertie(parameter/argument)
+        object['propertie'](parameter/argument)
+        this method is basically equal to the object on wich the method is called
+            is equal to the object calling the method 
+            this.propertie
+                returns the value associated with the propertie inside the object
+                object = {
+                    propertie : function() {
+                        console.log(this.propertie)
+                    }
+                }
+        whatever appears before the dot is the one who is calling the method
+            and so therefore in the method THIS points to the object
+         we can store the value of the function inside a new pair of propertie
+            object = {
+                propertie : function () {
+                    this.newPropertie = value of function
+                    return this.newPropertie
+                }
+            }
+            STUDY CASE:
+                "use strict";
+                const gabriel = {
+                    firstName: "Gabriel",
+                    lastName: "silva",
+                    birthYear: 1999,
+                    job: "cashier",
+                    lover: "izabela",
+                    hasDriverLicense: true,
+                    constructSummary: function () {
+                        this.summary = `${this.firstName}, has ${
+                            2025 - this.birthYear
+                        } years old, works as ${this.job} and ${
+                            this.hasDriverLicense == true ? "a" : "doesn't"
+                        } has drivers license`;
+                        return this.summary;
+                    },
+                };
+                console.log(gabriel.constructSummary());
+                or 
+                gabriel.constructSummary()
+                console.log(gabriel.summary)
+        arrays are also objects
+            a special case of methods 
+
+    control structure = THE FOR LOOPS
+        a loop that has counter, kkeeps runing while condition is true
+        for(initial value of the counter; logical condition that is evaluated before the execution of the code; increasing/update the counter)
+            console.log(....)
+            for(let rep = 1; rep <= 10; rep ++)
+                {console.log(...)}
+
+    loop arrays, breaking and continuing
+        
