@@ -128,16 +128,18 @@ day7 22062025
         can put an array inside of an array 
     
     basic arrays operations -- METHODS
-        array.push(element)
-            add an element to the end of array
-            becomes array[array.length-1]
-        array.unshift(element)
-            add an element to the begining of the array
-            becomes array[0]
-        array.pop
-            remove the last element of the array 
-        array.shift
-            remove the first element of the array
+        add an element to the array
+            array.push(element)
+                add an element to the end of array
+                becomes array[array.length-1]
+            array.unshift(element)
+                add an element to the begining of the array
+                becomes array[0]
+        remove one element of the array
+            array.pop
+                remove the last element of the array 
+            array.shift
+                remove the first element of the array
         array.indexOff(element)
             return the addres of the element inside the array 
             0 based
@@ -225,9 +227,40 @@ day7 22062025
     control structure = THE FOR LOOPS
         a loop that has counter, kkeeps runing while condition is true
         for(initial value of the counter; logical condition that is evaluated before the execution of the code; increasing/update the counter)
+            for(counter;condition;counter update)
             console.log(....)
             for(let rep = 1; rep <= 10; rep ++)
                 {console.log(...)}
 
+
+day8 23062025
+
     loop arrays, breaking and continuing
-        
+        the array needs to exist before it be used on a loop 
+    continue
+        exit the current iteration of the loop and continue to the next one
+    break
+        completely terminate the hole loop 
+     
+    looping backwards and loops in loops 
+        for (let i = Array.length - 1; i >= 0; i--) {}
+            because the legnth method isn't 0-based we need to subtract 1 from the length
+            while grater or equal 0 should continue 
+    
+    while loop
+        while needs counter, condition and counter update
+            let rep = 1
+            while (rep < 11){
+                console.log(rep)
+                rep++
+            }
+        more versetail, it only needs the condition, that needs to stay true for it to keep runing
+        returns a random number betwen 0 and 6 
+            (
+                Math.trunc(Math.random() * 6) + 1
+            )
+        while the condition is true do this 
+            while(condition === true){block of execution}
+        use while when we do not know how iterations will be necessary to match the condition 
+    
+    
