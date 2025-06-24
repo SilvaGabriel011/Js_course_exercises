@@ -1,0 +1,5 @@
+day9 24062025
+    configuring prettier 
+    snippets
+        cl - console.log()
+    
