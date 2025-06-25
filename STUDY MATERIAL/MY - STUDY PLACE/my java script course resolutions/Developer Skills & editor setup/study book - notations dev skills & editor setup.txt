@@ -2,4 +2,21 @@ day9 24062025
     configuring prettier 
     snippets
         cl - console.log()
-    
+    learning how to code   
+
+day10 25062025
+    coding in my own outside the projects of the course is good 
+        CODEWARS.COM
+    solving problems
+        4 step framework
+            100% understanding the problem
+            divide and conquer 
+                CONSTRUCT A TASK LIST BASED ON THE SMALL PROBLEMS
+            do research 
+            write pseudo-code
+    let max = Math.max(arr)
+        return the max value inside the array
+    let min = Math.min(arr)
+        return the min value inside the array
+    const arraymerged = arr1.concat(arr2)
+        return both arrays merged in one
