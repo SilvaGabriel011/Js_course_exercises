@@ -5,7 +5,7 @@ const printForecast = function (arr) {
 	let finalText = "";
 	for (let i = 0; i < arr.length; i++) {
 		let temp = arr[i];
-		finalText = finalText + ("... " + temp + "ºC in " + (i + 1) + " days");
+		finalText += "... " + temp + "ºC in " + (i + 1) + " days";
 	}
 	return finalText;
 };
