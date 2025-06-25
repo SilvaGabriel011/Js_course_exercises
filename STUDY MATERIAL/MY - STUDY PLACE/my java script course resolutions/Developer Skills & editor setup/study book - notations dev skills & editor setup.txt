@@ -20,3 +20,16 @@ day10 25062025
         return the min value inside the array
     const arraymerged = arr1.concat(arr2)
         return both arrays merged in one
+    about bugs
+        identify
+            realise that there is a problem.
+        find
+            isolate the bug
+        fix
+        prevent 
+        console.warn
+        console.error
+    console.table
+        good for displaying objects
+    can use debugger on code to activate on chrome console
+    
