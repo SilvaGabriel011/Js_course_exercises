@@ -43,3 +43,142 @@ day10 25062025
                     
                 </body>
                 </html>
+
+da11 26062025
+    attributes, classes and ids 
+        in html some elements can have attributes
+            this attributes describes the element
+        in the img we don have a closing tag
+            it dosent has any write content
+            so it will be like 
+                <img src="url"/>
+        DIFFERENT ELEMENTS HAVE DIFFERENT ATTRIBUTES
+            A(ELEMENT) = HREF(ATTRIBUTES)
+            IMG(ELEMENT) = SCR(ATTRIBUTES)
+        two attibutes that can be used in all of elements
+        name elements to select them in css in order to style them
+            classes
+            <p class= "name-of-the-class">
+            </p>
+            id's
+            <img class= "name-of-the-image"/>
+                can also secure an attibute of that element scope-type
+                <img class= "name of the image" src ="url"/>
+            i'ts also used in Js when we do DOM manipulation
+            the difference betwen classes and id's is that id's need to be different
+                so, we can repeate the name of the class, but we cannot repeat the name of the id
+        create a box in HTML
+            <div id="name-of-the-box">
+
+            </div>
+        we can have more than one h's elements on the same page
+            but only one title
+
+        <input type="type-of-data"(bool, num, str...) placeholder="type your data">
+            input also doesn't have closing tag
+
+        <button>
+            (for the button do somethin we would need some Js) 
+            text that is inside of the buttom
+        </button>
+
+        <p>
+        <a href= "url"> 
+        inline element
+        (link)
+        hyperlink
+        </a>
+        </p>
+      <img src="url"/>
+
+    when we have an input and a button as elements we consider the block as a form
+        in HTML when we have a form, as specified above
+            we have an speccial element called form 
+            its better descriptive of the content that is inside of the box 
+            <form>
+            </form>
+    the div box is generic 
+        its better to name acordingly
+        has meaning and semantic
+    
+    basic styling with CSS
+        used to style elements and to create a layout for the overal page
+        the style is placed inside the <head> </head>
+        <head>
+            element selector 
+                selec all elements of a certain type
+                    body{css declarations}
+                    body{
+                        propertie: specified value
+                        background-color:color(green,blue)
+                        }
+        </head>
+        css requires an separete file
+            style.css
+            to conect we use link element
+                <link href='name of the css file'rel='stylesheet'/>
+        inside the file we take the body{} from the html and stylçe from it
+        so...
+            inside the css file
+            when we declare something{}
+                we are selecting the element wich names represent, in the exemple we will se the body being select and then stylished
+                body{
+                    background-color:pink
+                    font-family:arial (any available font is used)
+                        the font family propertie is enherited by childs element
+                            the body element
+                        all properties that are related to font are enherited
+                }
+                h1 {
+                    font-size: 45px
+                }
+            to select a class (wich may have different elements) we use .class
+                .class{
+                    color:red
+                }
+            to select based on Id we use hastag (#name-of-the-Id)
+            #ids-name{
+                the bord is a shorthand propertie as makes possible to change different things
+                border: width style color
+                also the bord isn't enherited
+            }
+    
+    box model in CSS
+        its the main factor that defines how elements are displayed in the web-page and how they are sized
+        content of the box
+            its where all the text,images,content goes
+            we can define its height and width using the corresponding css properties
+        the paddin is a trasparent area arouind the content inside the box
+            create white space inside the box
+            we can define using the padding propertie in css
+        we can specify the border
+            goes around the padding and the content
+        the margin
+            white space between boxes
+            if we want to creat space between to things we simply need to use the margin propertie 
+        the fill area
+            area that gets filled witch background color/image
+            dont includes the margin
+        we need to reset all of the margins/padding/elements before doing anything
+            select all of this with the star(*) selector
+            *{
+                margin: value
+                padding: value
+                box-sizing:border-box 
+                    this will include padding and borders into the widthor the height that we specify for an element
+            }  
+        child selector
+            will be used in Js to selec styles while using DOM manipulation
+            #nome-of-id name-of-the-other-selector {
+                color
+            }
+                #your-name h2{
+                    color: white
+                }
+        for img, if theres only one, we can use the img selector 
+            but if it has more than one, we will use the Id/class of it
+            #name-of-image-id{
+                width: valuepx
+                its easier to specify the width
+            }
+    
