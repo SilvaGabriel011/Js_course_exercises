@@ -32,4 +32,5 @@ day10 25062025
     console.table
         good for displaying objects
     can use debugger on code to activate on chrome console
-    
+    the IA genereted code NEED TO BE REVIEWED
+         

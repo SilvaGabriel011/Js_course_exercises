@@ -1,0 +1,45 @@
+day10 25062025
+    basics of html and css
+
+    HTML structure AND elements
+        index.html 
+            name of the main file in any project
+        html document
+            made of elements using opening and closing tag
+            the main element is 
+                <html>
+                    <head>
+                    <title>
+                    "learning HTML & css"
+                    </title>
+                    </head>
+                    <body>
+                    <h1>
+                    TE MAIN TITLE OF THE PAGE
+                        JS is fun but HMTL & CSS ARE ALSO FUN
+                    </h1> 
+                    <p>
+                    a paragraph
+                        jane doe does smoke jelly on doe's balcony
+                    </p>
+                    </body>
+                </html>  
+        the title is what we gona see in chrome
+        the head is like the setting of the page
+        the body shows whays will be visible on the page
+        heading go to h1 to h6
+            each h's will have different styles automatticaly aplied by the browser
+        for DOM manipulation is good to have some basic ideas on HTML& CSS
+        can put links and images on html with attibutes
+        exclamation point and then tab
+            <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+                <body>
+                    
+                </body>
+                </html>
