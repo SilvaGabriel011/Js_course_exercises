@@ -1,86 +1,105 @@
-BUILD PROJECT WITH VISUAL USER INTERFACE
+day11 26062025
+    BUILD PROJECT WITH VISUAL USER INTERFACE
 
-GUESS MY NUMBER PROJECT
-    IT WILL NEED
-        CSS FILE
-        HTML FILE
-        JAVASCRIPT FILE
-    All of the interface is implemented in html 
-    document.querySelector('.message')
-        first select the ELEMENT
-            .textContent)
-                property 
-    we will make js interact with a web page
+    GUESS MY NUMBER PROJECT
+        IT WILL NEED
+            CSS FILE
+            HTML FILE
+            JAVASCRIPT FILE
+        All of the interface is implemented in html 
+        document.querySelector('.message')
+            first select the ELEMENT
+                .textContent)
+                    property 
+        we will make js interact with a web page
 
-        DOM MANIPULATION
-            document object model
-                structured representation of html documents
-                allows js to acces html elements and styles to manipulate them 
-                we will be able to change
-                    text
-                    atributes
-                    style - CSS
-            basicaly a conexion point between html doc and js codes
-            in the tree each html element is an object
-            Document
-            └── <html> (first child)
-                ├── <head> (siblings)
-                │   └── <title>
-                │       └── "Minha Página"
-                └── <body> (siblings)
-                    ├── <h1>
-                    │   └── "Título Principal"
-                    ├── <p>
-                    │   └── "Parágrafo de exemplo."
-                    └── <ul>
-                        ├── <li>
-                        │   └── "Item 1"
-                        ├── <li>
-                        │   └── "Item 2"
-                        └── <li>
-                            └── "Item 3"
-            for each element in html there is one element node in the DOM tree
-                to acces and interact with this nodes we use JS 
-                the dom always starts with the document object
-                    document is a special object that we have acess in js 
-                        the entry point
-                    we need it to start selectin elements
-            the first child element is usually HTML element
-            whatever is in the HTML DOCUMENT HAS TO BE IN THE DOM
-                so the dom is a complet representation of the html document
-            the dom its not part of the JS language
-                the dom and dom methods are acctually part of web API'S
-            THE WEB API'S (application programing interfaces)
-                are like libraries that browsers implement 
-                    we can acces from Js code
-            
-    selecting and manipulating elements
-        document.querySelector('.message').textContent = 'Correct number !!'
-        changing the value of an element
-        we need the html to get all of the class names that has values for this PROJECT
-        in an input field to get the actual value we use
-            document.querySelector('.element').value
-    
-    handling click events
-        the code will reacts to something that happens in the dom
-        for that we will need an event listener
-            mouse click = event
-            mouse moving = event
-            key press = event
-            with an event listener we can wait for a certain event to happen and react to it
-        in order to listen to the event we should place a listener where the event could happen 
-        so when we click on the button, somethin SHOULD HAPPEN 
+            DOM MANIPULATION
+                document object model
+                    structured representation of html documents
+                    allows js to acces html elements and styles to manipulate them 
+                    we will be able to change
+                        text
+                        atributes
+                        style - CSS
+                basicaly a conexion point between html doc and js codes
+                in the tree each html element is an object
+                Document
+                └── <html> (first child)
+                    ├── <head> (siblings)
+                    │   └── <title>
+                    │       └── "Minha Página"
+                    └── <body> (siblings)
+                        ├── <h1>
+                        │   └── "Título Principal"
+                        ├── <p>
+                        │   └── "Parágrafo de exemplo."
+                        └── <ul>
+                            ├── <li>
+                            │   └── "Item 1"
+                            ├── <li>
+                            │   └── "Item 2"
+                            └── <li>
+                                └── "Item 3"
+                for each element in html there is one element node in the DOM tree
+                    to acces and interact with this nodes we use JS 
+                    the dom always starts with the document object
+                        document is a special object that we have acess in js 
+                            the entry point
+                        we need it to start selectin elements
+                the first child element is usually HTML element
+                whatever is in the HTML DOCUMENT HAS TO BE IN THE DOM
+                    so the dom is a complet representation of the html document
+                the dom its not part of the JS language
+                    the dom and dom methods are acctually part of web API'S
+                THE WEB API'S (application programing interfaces)
+                    are like libraries that browsers implement 
+                        we can acces from Js code
+                
+        selecting and manipulating elements
+            document.querySelector('.message').textContent = 'Correct number !!'
+            changing the value of an element
+            we need the html to get all of the class names that has values for this PROJECT
+            in an input field to get the actual value we use
+                document.querySelector('.element').value
         
-        select the button element
-        document.querySelector('.check')
-        now the button needs the event listener method
-            and as a method there are multipple ways to listen to events
-            addEventListener("nameOfEvent",what should the event listener do)
-                    what to do == function (its called eventHandler)
-                        what should happens when the button is pressed
-            real exemple:
+        handling click events
+            the code will reacts to something that happens in the dom
+            for that we will need an event listener
+                mouse click = event
+                mouse moving = event
+                key press = event
+                with an event listener we can wait for a certain event to happen and react to it
+            in order to listen to the event we should place a listener where the event could happen 
+            so when we click on the button, somethin SHOULD HAPPEN 
+            
+            select the button element
+            document.querySelector('.check')
+            now the button needs the event listener method
+                and as a method there are multipple ways to listen to events
+                addEventListener("nameOfEvent",what should the event listener do)
+                        what to do == function (its called eventHandler)
+                            what should happens when the button is pressed
+                real exemple:
 
-            document.querySelector('.check').addEventListener('click', function () {
-            console.log(document.querySelector('.guess').value);
-                })
-            the eventHandler function will only be called when the event happens
+                document.querySelector('.check').addEventListener('click', function () {
+                console.log(document.querySelector('.guess').value);
+                    })
+                the eventHandler function will only be called when the event happens
+
+day12 27062026
+    implementing the game logic
+        its good to have data also in the code not only in the dom 
+    
+    manipulating css styles
+        to manipulate the style of the hole page
+            for that we need to select the hole body of the page
+            document.querySelector('body').style.backgroundColor = '#60b347' (green)
+                dosen't comes with dot because its an element (like p, a, div, head...)
+            it needs to be inside an string 
+        like this we are no changing the real css file 
+            this styles are set like inline style
+        so we need to use the style propertie
+            inside of the style we acces the propertie wich will be changed (in cammelCase notation
+                wich is different from what regular css uses (cammel-case)
+            )
+            and then the value needs to be a string 
