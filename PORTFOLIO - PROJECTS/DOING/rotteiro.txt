@@ -1,0 +1,191 @@
+começar por uma API 
+    pq o front começa puxando API
+    pode fazer front 
+        js puro/typscript puro 
+        usar framework 
+    framework 
+        'tudo que precisa praquele proposito' 
+            pacote pra requisição http
+            manipulação de dom
+    react biblioteca
+        falta coisas
+        nao tem requisição em http
+        dentro do react tem o nextjs que é um framework pra react 
+    bianca - frameworks 
+        nextjs
+            sintatica propria pra html jsx  
+        angular 
+            mais organizado
+            arquivo html separado
+    
+pra começar
+    iniciar um projeto com uma framework
+    nestjs 
+    cli 
+        comand line interface 
+    quando escreve um arquivo em js 
+        um node faz uma chamada no sistema operacional 
+            para realização de leitura de arquivo
+            kernel operation 
+            node pega .js -> .c 
+            v8 interpretador js
+            lib uv - operações assincronas e resp com comunicação com sistema operacional
+    nodejs
+    npm i -g @nestjs/cli
+        npm gerenciador de pacores do node 
+            i install 
+                -g global disponivel na maquina 
+    tudo que ta fora de source sao arquivos de config
+        o que eu vou alterar sao arquvios dentro de source (src)
+    
+    typescript --- js tipado 
+    na vida real tem varios prog no mesmo projeto
+    linter --- deixa padronizado a identação do codigo 
+        prettier 
+    
+    boas praticas --- biblioteca que padroniza quando sai disso 
+        eslint 
+            se nao tipar vai dar erro em tempo de execução 
+                retorna chingamentos no email  
+    
+    perguntas direcionadas --- chatgpt 
+
+    packjson 
+        gerencia as dependecias 
+        toda biblioteca usada vai ter registro dentro do package 
+        npm i - o nome da biblioteca vai pa dentro desse arquivo 
+    node_modules nunca sobe pro github 
+        ignorada pelo git 
+        sobe o pacote.jason 
+            pra subir as dependencias 
+            npm install sem nada pra ler o json e instalar 
+
+    
+    dentro da pasta source - src 
+        organiza a aplicação pelo dominio
+            melhor organizado por entidade 
+            entity
+        apenas um dominio 
+            todo
+                a entidade que vai ser operacionada
+                crud em cima do tudo 
+            toda aplicação tem o entry point 
+                em nest a aplicação chama 
+                    app
+                    serve como entry point e importa outros modulos da aplicação 
+                app.controller.spec.ts
+                    serve para testar 
+                    tdd 
+                        test driven design 
+                        começar pelos testes 
+        nao testaremos 
+            arquivo de teste foi excluido   
+        nest é opinionado ja vem com uma estrutura 
+            modulo 
+            importa coisas pra dentro do modulo 
+                provedores....
+                arquivo de config 
+            controler (validação)
+                recebe a chamada 
+                end point
+                    quando o front end chama a api 
+                    ele chama algum dos end point que ta dentro do controller vai rodar
+                    operações possiveos 
+                        get === busca recurso (leitura)
+                            nao pode fazer update dentro do get
+                        post === criar recurso 
+                        patch === 
+                            nao precisa chamar o objeto inteiro
+                            flag, texto, ischeck (bollean)
+                        put === atualizar
+                            o recurso inteiro, todos os atributos
+                                flag,texto,ischeck
+                            put - pega o objeto inteiro mas pode alterar um so
+                                text: example
+                                checked: false
+                        delete === deletar 
+            idempotencia
+                A OPERAÇÃO QUANDO CHAMADA VARIAS VEZES O RESULTADO TEM QUE SER O MESMO 
+                NAO ATUALIZAR O RECURSO QUE VAI SER EXIBIDO AO USUARIO 
+
+            services (execução)
+                vai realizar a operação de fato 
+                executa tudo (?)
+        AÇÕES
+            gerar um modulo pra entidade 
+                oprações referente a entidade alocada dentro do modulo 
+                scripts dentro do json podem ser alterados
+                quermos criar um script chamado start dev 
+                start dev 
+                    toda alteração que eu fizer no codigo ele faz em tempo real pra nao ficar reiniciando a aplicação 
+            começar criando um decorator
+                colocar uma f(X)
+            nao da pra so criar ja que os dados vao ser usados no front eles tem que ser chamados 
+        tipos de requisição http
+        get pra usuario especifico 
+            get pra id especifico   
+                parametro novo 
+                criar um dto pra parametro novo 
+
+
+
+DUVIDAS CHAT GPT
+    RESETAR KEYBIND
+    caminho relativo x caminho absoluto 
+    @post()
+        decorator typscript ???? 
+    pagar uma terapia pra bianca depois 
+    addToDo() {
+    return this.toDoService.addTodo();
+            }
+            spread ???
+    dto
+
+
+nao pode declarar variael com const dentro de classe
+    dentro de classe nao usa function tbm 
+    propriedade que dentro de uma classe 
+
+no inicio implementar algo com orientação ao objeto 
+    uso de sintaxe do framework
+    decorator 
+        função que pega sua função eai passa pelo proxy 
+        pega função adiciona algo nela e ela vira um end point 
+        pega função adiciona sobrenome
+            retorna a função primaria concatenada ao sobrenome
+    no inicio pega os conceitos 
+        post,get,...
+    resetar o vscode 
+        exclui e instalar novamente 
+    body da requisição
+        onde estao os dados
+
+endpoint - post - body - atributtes
+        import { Body, Controller, Post } from '@nestjs/common';
+        import { ToDoService } from './to-do.service';
+
+        type ToDoData = {
+        name: string;
+        description: string;
+        };
+
+        @Controller('to-do')
+        export class ToDoController {
+        constructor(private readonly toDoService: ToDoService) {}
+        @Post()
+        addNewToDo(@Body() body: ToDoData) {
+            return this.toDoService.addTodo(body);
+        }
+        }
+
+quando para de rodar aplicação o array some da memoria
+    na vida real usa banco de dados 
+    export
+        ir no typo, selecionar a ultima letra antes do parenteses
+            ctrl + a
+        allias of types 
+
+os decorators executam apenas a função abaixo deles 
+todo codigo 200 significa que deu certo 
+
+quando baixar eu preciso dar um npm install 
