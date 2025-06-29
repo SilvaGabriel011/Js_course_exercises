@@ -63,7 +63,7 @@ btnHold.addEventListener('click', function () {
   }
   //2. check if score is >= 100 ? win game : switch player});
 
-  if (scores[activePlayer] >= 15) {
+  if (scores[activePlayer] >= 30) {
     playing = false;
     document
       .querySelector(`.player--${activePlayer}`)

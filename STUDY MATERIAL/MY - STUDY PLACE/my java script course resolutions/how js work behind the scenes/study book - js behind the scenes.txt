@@ -1,0 +1,11 @@
+day13 29062025
+    the js engine and runtime 
+        engine - program that executes js codes
+      web api re functionalitys provided to the engine 
+        they are not part of the js language
+        js gets acces to those apis trhough the global window object 
+      arrow function doesnt have
+        this keyword
+        arguments object 
+    code runs inside the execution context that are in the stack 
+        the code runs inside the call stack
