@@ -48,6 +48,52 @@ day 15 02072025
         ??
         works with the idea of nullish values
             null and undefined 
-            only those two will sohortcut the evaluation 
+            only those two will shortcut the evaluation 
         the first non nullish value is returned 
+
+
+day16 03072025
+
+    logical assignement operators
+        the or (||) assignment operator 
+            assignes a value to a variable if that variable is currently falsy 
+                a.propertie = a.propertie || 10
+                    can be write as 
+                    a.propertie||= 10
+                    if there are difference betwen the properties it will be then assigned the value 10 as a value of the propertie 
+                        so if the object dosent have the propertie it will then get the propertie and also the value 10 
+
+        the nullish asignment operator (??)
+            it will evalueate if one of the values are null/undefined and if so it shortcut
+                will assgine a value to a variable if that variable is nullish/undifined 
+        
+        the and asignment operator (&&)
+            it will return the first falsy value 
+                a.propertie = a.propertie && 'falsy'
+                    if both of the properties are the same the 'falsy' is returned 
+                    a.propertie &&= 'falsy'
     
+    loop over arrays - for of loop
+        automaticly loop over the entire array 
+            and each iteration it will give acces to the current item iteration 
+        its able to use continue/break 
+        for (const item of items){block of code}
+
+        exemple of destructuring a for of loop 
+
+            for (const item of menu.entries()){
+                console.log(`${item[0] + 1}: ${item[1]}`);
+            }
+                should return
+                1: foccacia
+                2: bruschetta ...
+
+            with destructuring 
+            for each pair of [index, value] give me i and el 
+                
+                for (const [i,el] of menu.entries()){
+                    console.log(`${i + 1}: ${item[el]}`);
+                }
+                    should return
+                    1: foccacia
+                    2: bruschetta ...
