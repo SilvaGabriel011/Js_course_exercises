@@ -9,3 +9,123 @@ day13 29062025
         arguments object 
     code runs inside the execution context that are in the stack 
         the code runs inside the call stack
+
+day 14 30062025
+  scoping and scope in js 
+    lexical scoping 
+    scoping is controlled by placemant of functions and blocks in the code 
+      each and every functions create a scope 
+        local scope
+    blocks (inside curly braces)
+      has local scope also
+        this for let and const
+    scopechain
+      the inner scopes has acces to the parents scopes
+        the child can see the father but the father cannot see the child
+        variable lookup
+        variable declared with var are function scoped first
+          let and const are block scoped
+      sibling scopes cannot acces each other 
+  
+  hoisting 
+    make some types of variables accssible in the code before they are actually declares 
+      lifted the top of thei scope
+    functions declarations can be used before they are declared in the code
+      function addDecl(a,b){
+        return a+b
+      }
+    functions expressions cannot be used before they are declared in the code 
+      const addExp = function(a,b){
+        return a+b 
+      }
+    variables have temporal dead zone 
+      easir to catch errors and avoid bugs 
+      make const variables works as they should 
+    good for recursion 
+
+  this keyword
+    basically a special variable that is created for every execution context (every function)
+      takes the valeu of 'points to' the owner of the function in wich the this keyword is used
+    the value is not static
+      depends on how the functions is called and its values is only assigned when the funcion is actually called
+      arrow functions do not get their own this keyword
+        it will uses the this keyword from the parent function/scope
+    this do not point to the function itself
+      also not the its variable environment 
+    const gabriel = {
+      year : 1999
+      calcAge : function(){
+        console.log(this)
+        console.log(2025 - this.year)
+      }
+    }
+    gabriel.calcAge()
+      return all the propertie of gabriel
+
+      also
+      returns the value of ( 2025 - this.year )
+        where the this take the place of the object owner/name
+    method is an function inside a object
+    so to sumarize
+      the this keyword points to the object who calls the method 
+
+day 15 02072025
+  var creates variables in the global window
+  this keyword when we have a functions inside of a method
+  inside a regular function call the this keyword is undefined
+  exemple 
+          const jonas = {
+        firstName: 'Jonas',
+        year: 1991,
+        calcAge: function () {
+          // console.log(this);
+          console.log(2037 - this.year);
+
+          // Solution 1
+          // const self = this; // self or that
+          // const isMillenial = function () {
+          //   console.log(self);
+          //   console.log(self.year >= 1981 && self.year <= 1996);
+          // };
+
+          // Solution 2
+          const isMillenial = () => {
+            console.log(this);
+            console.log(this.year >= 1981 && this.year <= 1996);
+          };
+          isMillenial();
+        },
+    functions also gets acces to arguments keyword
+      arguments keyword only works on regular functions
+  
+
+  memory manegment in js - primitive / objects 
+    allocate memory -> use memory -> release memory
+    memory allocation 
+      diferent type of values memory are located in diferente places
+      when the variable is an object it will hold an refference to the object in the HEAP
+      its possible to change propertie values of a constant object
+        but its not possible to change the whole object if it is a constant
+    object are not copied when we passed them in to functions, but instead we only pass the functions 
+    the spread operator ...used for shallow copy
+      places all the properties of the original object inside a new object
+      const gabrielCopy = {...fisrtObject}
+      can copy all the primitive datas, but when it comes to objects copies just the reference 
+        so if we change the object inside it we are changing the reference
+    deep clone
+      const gabrielClone = structuredClone(gabrielObject)
+  
+  garbage collection
+    mark
+      all object that are reachable
+    sweep 
+      delete unmarked
+    memory leak 
+      object is incorrectly referenced somewhere
+  
+  how js works behind the scenes later topics
+    closures
+    prototypal inheritance 
+      oop 
+    event loop 
+

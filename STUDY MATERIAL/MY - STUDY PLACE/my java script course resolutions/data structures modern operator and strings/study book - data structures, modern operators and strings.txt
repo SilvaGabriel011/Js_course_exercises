@@ -1,0 +1,53 @@
+day 15 02072025
+    destructuring arrays 
+        const [value1, , value2] = object.propertieThatIsAFunction(parameter1, parameter2)
+                the empty space is when we want to skip and element
+            returns the values that the functions propose as 2 separate value 
+                or smothing like that
+    destruct objects
+        its useful to set default values
+        arr = [ 7,8,9]
+        newArr = [1,2,...arr]
+            the spread operator write the values individually 
+        spread operator takes the eelements from the array and dosent create new variables
+        const copyArray = [...oldArray]
+            creates a shallow copy of the array 
+        multiple values separeted by a coma are only expected when we pass arguments into a function or when building a new array 
+        can copy the object into a new one with spread (...)
+            const newObject = {...object}
+                newObject.propertie = new value
+                    it doesnt change the propertie from the original/first object 
+
+    rest parameter and parameters 
+        pack elements into a array
+        const [a,b,...others] = [1, 2, 3, 4, 5]
+            its a rest operathor because it is on the left side of the equality 
+            the rest should be the last element 
+        const add = function(...numbers){
+                the ... are being compressed into one array 
+                    doesnt matter how many argments are being passed 
+            sum = 0
+            for(let i =0; i < numbers.length; i++) sum += numbers[i]
+        }
+        add(2,3)
+        add(3,4,5,6)
+        so rest can be used when we would write names separate by comas
+    
+    SHORT CIRCUITING (&& AND ||)
+        it can be used any data type and can return any data type
+        short-circuiting 
+        ||operator
+            if the first value is truthy/true value
+                the second dosent get evalueated
+            if all of the operators are falsy, returns the last one 
+        in the && when the evaluation gets to a alement that its falsy it returns it 
+            so the first value that has falsy/false type of data it's returned 
+            returns the last element if all are truthy 
+     
+    the nullish coalescing opeartor 
+        ??
+        works with the idea of nullish values
+            null and undefined 
+            only those two will sohortcut the evaluation 
+        the first non nullish value is returned 
+    
