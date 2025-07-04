@@ -50,6 +50,8 @@ day 15 02072025
             null and undefined 
             only those two will shortcut the evaluation 
         the first non nullish value is returned 
+        link for stud better 
+    https://chatgpt.com/share/6867d6f8-d864-800a-a9c6-18057044e17c
 
 
 day16 03072025
@@ -97,3 +99,41 @@ day16 03072025
                     should return
                     1: foccacia
                     2: bruschetta ...
+
+
+day17 04072025
+
+    enhanced object literals 
+        put the object inside the other withou being repetitive 
+            instead of a , properties:properties, b...
+                a, propertie, b ... 
+        dosent need to declare the function with the function keyword 
+        also naming properties can be done dinamicaly with the used of []
+            inside of the [] can be put anything that ir read as a value 
+    
+    optional chaning 
+        if certain propertie does not exist its logged undefined 
+            object.propertie?.propertie2
+                only if the propertie behind the question mark exist the second propertie will be seached for
+                if not undefined is returned 
+        can be called for methods aswell
+            object.method?.()
+            the question mark test if the value on the left exists 
+        its usually combined if the nullish coalescing operator 
+
+    Looping objects 
+        object.keys(objectCreated)
+            return in an array all of the keys of the object inside the parentesis 
+        object.values(objectCreated)
+            return an object with the values 
+                in a ordinated way 
+        object.entries(objectCreated)
+            return the index number and the element itself as an array 
+                first the key and then the value 
+            when we get the object and the array we can deconstruct to make more iterable
+
+            exemple
+                for (const [day, { open, close }] of entries)
+                     {
+                console.log(`On ${day} we open at ${open} and close at ${close}`);
+                     }   
