@@ -1,0 +1,40 @@
+aula 08 as 10
+ESTUDO O QUE DER DE PROG
+academia das 11 12
+trabalho das 14 as 21
+	1 ep podcast tech
+	1/2 vídeos de tech pra eu ver	
+	estudar o clean code Ou REFORÇAR
+21:20 AS 230:30 
+	estudo  	 
+
+
+
+DIA 28/06 
+	RESPOSTA MAS RAPIDA TALVEZ
+		ESTUDAR E APLICAR REST? 
+		FAZER UM PROJETO MESMO
+	USO DE FRAMEWORK 
+		NAO DA PRA FAZER PROJETO ESCALAVEL COM JS VANILLA 
+	DOM - BROWSER Q FICA EM UM SERVIDOR
+
+	API NAO FICA NO BROWSER 
+
+	API REST RODA NO NODE 
+		NAO TEM ACESSO A DOM 
+	DDD APROACH DE DESING DE SOFTWARE 
+		MODELA A PARTIR DO DOMINIO DA APLICAÇÃO 
+			CASOS DE USO = DOMINIO 
+		
+	:/ JÁ HÁ DIVIDA TÉCNICA 
+		TEM QUE IR PRA FRENTE MESMO ASSIM
+	
+
+	to do 
+		apresenta todas as operação do rest
+			add, atualiza, delete, read 
+			crud ?
+	
+
+	
+
