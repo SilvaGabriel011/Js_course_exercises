@@ -137,3 +137,197 @@ day17 04072025
                      {
                 console.log(`On ${day} we open at ${open} and close at ${close}`);
                      }   
+
+day18 07072025
+
+    sets
+        just a collection of unique values 
+        to create a set we use
+            new Set ([iterable])
+                cont randomSet = new Set ([1,2,3 'a','b'])
+            the duplicates are gone
+        a set are iterable 
+        the order of the elements are irrelevant 
+        can also have strings 
+        to get the lenght we use .size 
+            randomSet.size // 5 
+        has method 
+            work as include of the arrays method 
+            randomSet.has 
+        we can add new elements trough
+            .add method
+        we can delete elements 
+            .delete method 
+        there are no indexes in sets 
+        its good only to know if we use just to see if a value is in there
+        can delete all of the elements of a set with one method 
+            .clear method 
+        in a normal code base we use sets to remove duplicate of arrays 
+            this example shows how to transform a array with doubled values and make it to a set, to create a 'container' with no repetition, and after that make it back to an array
+            const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter']
+            const staffUnique = new set(staff)
+                const staffUnique = [...new set(staff)]
+                    this is possible because the spread works on iterables 
+            const staffUniqueAsArray = ...staffUnique
+        NEW SETS METHODS 
+
+            // const italianFoods = new Set([
+            //   'pasta',
+            //   'gnocchi',
+            //   'tomatoes',
+            //   'olive oil',
+            //   'garlic',
+            //   'basil',
+            // ]);
+
+            // const mexicanFoods = new Set([
+            //   'tortillas',
+            //   'beans',
+            //   'rice',
+            //   'tomatoes',
+            //   'avocado',
+            //   'garlic',
+            // ]);
+
+            intersection method 
+                const commonFoods = italianFoods.intersection(mexicanFoods) // new set wit only the elements that are duplicates between both of the sets 
+            union method    - all of the elements of both saets without the duplicates 
+                const italianMexicanFusion = italianFoods.union(mexicanFoods)
+            difference method - all the elemnts that are on the first set but not in the second one 
+                const uniqueItalianFood = italianFoods.difference(mexicanFoods)
+            unique method - all of that just present exclusively on both of the sets
+                const uniqueItalianMexicanFood = italianFoods.symetricDifference(mexicanFoods)
+    
+
+    maps 
+        can use to map values to keys
+        the keys can have any type
+            the keys could be objects, arrays, maps
+        const rest = new map()
+        rest.set('name','classico')
+            function as the add method 
+            so this is 
+            ('key' , 'value')
+            withi will look like 
+            0 : {key => value}
+                and the value can be anything 
+                can get chain .set to update the map 
+        to retrieve data we use .get method 
+            can be used with the key 
+                the type of the data is sensible to retrieve the data 
+        check if the map has a certain key 
+            .has method 
+            rest.has('keyName')
+        delete a key value on map with the .delete method 
+        check the size of sets 
+            .size method 
+    
+    maps iterations 
+        we can create and add elements to a map without using the .set
+            const mapArrayOfArrays = new map ([[key1,vale1],[key2,value2]])
+        it is also possible to convert an object to a map 
+            const convertedObject = new map(object.entries(objectToBeConverted))
+        are also iterables 
+
+        question.get(question.get('correct') === answer)
+
+        map back to an array 
+            build a neww aray and unpack the map inside of it using spread
+                ([...map])
+            can have the map deconstruct inside a array and use the methods of an array 
+    
+    witch data structure we use ? 
+        sources of data 
+            from progman itself
+            user innerface (ui)
+            external sources - api 
+        collection of data 
+            data structure 
+                simple list of values 
+                    array OR set
+                key/value pair 
+                    maps OR object 
+        WHEN GETTING DATA FRMO WEB API 
+            data from web api is fetched as json 
+                object/map 
+        there are more than the for built in data structures 
+        
+        ARRAYS 
+            VALUES ORDERED 
+            MANIPULATE DATA 
+        SETS 
+            UNIQUE VALUES 
+            HIGH PERFORMANCE 
+            REMOVE DUPLICATE 
+        OBJECTS
+            MORE TRDITIONAL 
+            EASIER TO WRITE AND ACCES
+            functions as values (methods, also possible to use this keyword)
+        MAPS
+            BETTER PERFOMANCE 
+            KEYS CAN HAVE ANY DATA TYPE 
+            EASY TO ITERATE 
+            EASY TO COMPUTE SIZE 
+
+
+    working with strings 
+        strings are zerobased 
+        strgins are primitive so impossible to mutate 
+        boxing 
+            takes a strings and puts into a box wich is an object 
+            
+day19 08072025
+
+    working with strings 1
+        string.toLowerCase
+        string.UpperCase
+        string[0].toUpperCase() + passenger.toLowerCase.slice(1)
+            to make the first latter cappital and rest lowercase
+                can be done as 
+                    -> string.replace(string[0], string[0].toUpperCase())
+        string.trim()
+            correct spaces 
+        all of them are case sensitive 
+            string.replace('what will be replaced', 'what will replace')
+                can do chaning 
+                only replace the first ocurrency of te search 
+                string.replace(/what will be globaly replaced/g, 'what will replace')
+            string.replaceAll()
+                replace all the ocurrencies 
+            return booleans
+                string.includes()
+                string.startWith()
+                string.endsWith()
+        when receiving strings, start to put all of it in lowercase 
+    
+    working with strings 2
+        split method 
+        string.split('what will be searched to split')
+            string.split(' ')
+                search for spaces then whats besides it will be stored in to an array 
+            allow us to divide a string based on a specific part 
+            store all of was split up into a array 
+        join method 
+            make the elements of an array to become a unique string back 
+            string.join('what will be placed betwen the elements)
+        padding a string 
+            add a number of carachters 
+                until the string has a specific number of elements 
+            string.padStart("number of elements that the strings should have', 'what will be placed to match the number specified')
+                at the begining of the string 
+            string.padEnd("number of elements that the strings should have', 'what will be placed to match the number specified')
+                at the end of the string
+            repeat method 
+                string.repeat('number of times that the string will be repeated')
+    
+
+    WHEN LOOPING TROUGH AN ARRAY AND NEED THE indexes
+        BECAUSE IT IS A FOR OF LOOP
+            WE USE ARR.ENTRIES()
+            AND THEN DECONSTRUCT THE VARIABLES 
+            like
+                for( const [index, value] of array.entries()){
+                    console.log(index, value)
+                }
+                    will print the position of wich value is inside of the array 
+    
