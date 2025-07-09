@@ -1,0 +1,80 @@
+da19 08072025
+    default parameters
+        functions with some parameters that have default values 
+        const randomFunction = (parameter1 = defaultValue1, parameter2 = defalutvalue2...) {
+            block of execution
+        }
+    can declare undefined when calling the function to make the parameter equal the default value 
+
+day20 09072025
+    how passing arguments arguments - value vs references
+        passing by value 
+            in js we always pass the value even if the valu is a refenrece to an object, it is still a value 
+            we do not pass by refenrece 
+    
+    first class and high order functions 
+        functions are called first citizens
+            means they are values === objects 
+        there are methods that we can call on functions 
+        a higher order function
+            a function that receuives another function as an argument, that returns a new function or both 
+            possible because of first class functions
+            the function that is passed as an argument 
+                called callback function
+        first class == concept that functions are seen as values 
+    
+    functions receiving callbacks
+        callback because the js is the one calling those functions 
+
+    functions returning functions 
+        this works because of CLOSURING 
+        the inside function takes the value of the outside and become itself a function carrying the outside value 
+            const greet = (greeting){
+                return function(name){
+                    console.log("${greeting} ${name}")
+                }
+            }
+            const greeterHey = greet('hey')
+            gretterhey("jane doe")
+                so here its the catch, te inner function wich was anounymous now is gretterhay as declared above and can get their proper argument 
+            also can work as 
+                greet("hello")("jane doe")
+    
+    the call,aply and bind method 
+        call method
+            how can set this keyword manually 
+            when unsing a funtion that was a method for some object we need to tel js that 
+                the this keyword from the method should point to someting diferente from undefined/window 
+                when needing this we use call() method 
+                the first argument of the call method should be the object/escope of execution that the this keyword inside of the function should point to 
+                    this is to avoid window/undefined pointing 
+                function.call(firstArgument,secondArgument,...)
+        aply method 
+            doesent take the argument apart
+            work as the same on the first argument -> redirecting the this keyword from the method 
+                but the second part of the argument should be an array 
+            its better to use call method and spread the array of data as other arguments needed
+        the bind method 
+            manually set the this keyword 
+                does not immediately call the function 
+                it returns a new functioins where the this keyword is bound 
+            CREATES A NEW FUNCTION WHEREAS THE THIS KEYWORD IS BINDED TO THE OBJECT PASSED AS ARGUMENT 
+                function.bind(object, other arguments)
+                    the function is the method, having a this keyword waiting to be pointed to something (to remove window/global orientation)
+                good pratice to stroe the function bind as a new variable 
+                    const newVariable = function.bind(object, other arguments)
+            can also define other arguments 
+            specfing parts of arguments beforehand
+                partial aplication 
+            in a event handler function the this keyword points to the element on wich that handler is attached to 
+            when we don care about the this keyword, the first argument inside the parenthesis of the bind method is 'null' 
+
+    immediately invoked functions expressions
+        wraping a function inside in parenthis 
+        anounymous function 
+    
+    closures 
+        a closure makes a function remember all variables that existed in its birthplace 
+        the variable goes to the heap because it can be reached by a closure 
+            so it doesnt is garbeged collected 
+            
