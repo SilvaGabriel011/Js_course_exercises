@@ -1,0 +1,103 @@
+day20 10/07/2025
+    
+    simple array methods 
+        arrays have methods aswell
+        slice method 
+            array.slice(indexStarExtracting, endParameterNotIncluded)
+                array.slice(1)
+                can be negative and will start from the end of the array, can easily get the last element with -1 of index 
+                to chain multiple methods togeter is good to use slice method 
+        splice method 
+            array.splice()
+            the extracted elements delete the elements that were chooses from the original array 
+            so it mutate the original array 
+        reverse method 
+            array.reverse()
+            reverse the array 
+            mutate the original array 
+        concat method 
+            array1.concat(array2)
+            concatonate 2 arrays
+            doesnt mutate the original array 
+        at method 
+            array.at(index)
+                returns the value of the index
+            can get the lest elemtn trough -1 index 
+                array.at(-1)
+            also works on strings 
+                console.log('gabriel'.at(-1)) // l 
+        
+    looping arrays - for each 
+        high order function, wich requires a callback function to tell it what is needed 
+        it will iterate over the array an with each iteration will execute the callback function
+            the current element of the array can be specified as argument 
+            array.forEach(callBackFunction(argument) {
+                block of execution
+            });
+
+        it passes the element, the current index ant all of the array for each iteration 
+            but the order in the parenthesis should match
+                the element/value , the current index , the entire array 
+                movements.forEach(function (movement, index, array) {
+                    for (const movement of movements) {
+                        if (movement < 0) {
+                            console.log(`deposits of ${movement}`);
+                        } else {
+                            console.log(`you withdrew ${Math.abs(movement)}`);
+                        }
+                    }
+                });
+
+        the continue and break statements do not work on a for each loop 
+                ***also, dont forguet of add 1 when working with indexes***
+
+        for each maps and sets 
+                map.forEach(function(value,key,map) {
+                    block of execution
+                });
+
+                it will be the same for sets
+                set.forEach(function(value,key,map) {
+                    block of execution
+                });
+
+        its possible to spread an array an at the same time use method 
+            see example:
+                let juliaCopy = [...arrJulia].slice(1, -2);
+                also, dont forguet of add 1 when working with indexes
+
+        data transformation : map, filter reduce 
+            map 
+                loop over arrays 
+                    creates a new array based on the new array 
+                    in each iteration apply a callback function to the current array
+                build a brand new array aplying and operation to the elements of the original ements
+
+            filter 
+                filter for elements that satisfy the test that we specified 
+                is a new array that will be return 
+                    without the element that came as false from what we filtered 
+
+            reduce 
+                reduce all array elements down to one singue value 
+                can add all values of the array into one single 
+                    arr[1,2,3]   
+                        arr.reduce(function(acc, val) {
+                            return acc + val;
+                        });
+                        // if its a propertie that's adding values the result would be 
+                        // 6
+            
+
+            the map method 
+                used to loop over arrays
+                will give us a brand new array
+                this new array will contain the result of aplying a callback function to the original array elements 
+                const newArray = array.map(callBackFunction(currentArrayElementAsArgument)
+                        return currentArrayElementAsArgument * functionRandom
+                )
+                we pass a calback function into the map method 
+                    then the map() method will cal the function for each iteration on the array
+                not create a side effect on each iteration 
+                    performance ?
+                     

@@ -330,4 +330,4 @@ day19 08072025
                     console.log(index, value)
                 }
                     will print the position of wich value is inside of the array 
-    
+

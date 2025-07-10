@@ -77,4 +77,10 @@ day20 09072025
         a closure makes a function remember all variables that existed in its birthplace 
         the variable goes to the heap because it can be reached by a closure 
             so it doesnt is garbeged collected 
-            
+        a function always has access to the variable environment of the execution context in wich it was created
+        closure 
+            variable environment attached to the functions, exactly as it was at the time and place the funciton was created 
+        the scope chain is maintained 
+        thanks to the closure a function not lose conection to variables that comes from its birthplace 
+        thres no way to accesc closed-over variables 
+        
