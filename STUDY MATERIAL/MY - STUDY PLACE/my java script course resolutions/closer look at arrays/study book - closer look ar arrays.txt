@@ -100,4 +100,30 @@ day20 10/07/2025
                     then the map() method will cal the function for each iteration on the array
                 not create a side effect on each iteration 
                     performance ?
-                     
+                //create a new array 
+
+day21 15072025
+
+        computing usernames 
+            the callback function in the map method always need to return a new value that should be a new array 
+        
+        the filter method
+            filter for methods that satisfy certain condition 
+            we use a callback function to specify the certain condition 
+            const newCreatedArray = array.filter(function(arrayElement, elementIndex){
+                return boolean value })
+                    so use the comparators 
+                        > , < , >= , <= 
+            can be done aswell as 
+                const createNewArray = array.filter(arrayElement => arrayElement > 0)
+            can be chained together with other methods 
+        
+        reduce method
+            boil down all elemnts of an array in one single value 
+                accumulator === snowbal
+            const oneValue = array.reduce(function(accumulator, current, index, array){
+                    return acc + cur
+            }, initialValueOfAccumulator)
+                also loops over the array and call the callback function of the reduce, and do something with the accumulator
+                initialValueOfAccumulator can be 0 or other values... 
+            
